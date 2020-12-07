@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "jwtSecret": {
+      "reference": {
+        "secretName": "jwtsecret",
+        "keyVault": {
+          "id": "/subscriptions/6cd489d7-1a2c-4d4a-bfcf-10dd843138ab/resourceGroups/Publicon/providers/Microsoft.KeyVault/vaults/publiconkeyvault"
+        }
+      }
+    },
+    "emailPassword": {
+      "reference": {
+        "secretName": "password",
+        "keyVault": {
+          "id": "/subscriptions/6cd489d7-1a2c-4d4a-bfcf-10dd843138ab/resourceGroups/Publicon/providers/Microsoft.KeyVault/vaults/publiconkeyvault"
+        }
+      }
+    },
+    "email": {
+      "reference": {
+        "secretName": "email",
+        "keyVault": {
+          "id": "/subscriptions/6cd489d7-1a2c-4d4a-bfcf-10dd843138ab/resourceGroups/Publicon/providers/Microsoft.KeyVault/vaults/publiconkeyvault"
+        }
+      }
+    },
+    "frontendName": {
+      "reference": {
+        "secretName": "url",
+        "keyVault": {
+          "id": "/subscriptions/6cd489d7-1a2c-4d4a-bfcf-10dd843138ab/resourceGroups/Publicon/providers/Microsoft.KeyVault/vaults/publiconkeyvault"
+        }
+      }
+    },
+    "connectionString": {
+      "reference": {
+        "secretName": "dbcon",
+        "keyVault": {
+          "id": "/subscriptions/6cd489d7-1a2c-4d4a-bfcf-10dd843138ab/resourceGroups/Publicon/providers/Microsoft.KeyVault/vaults/publiconkeyvault"
+        }
+      }
+    },
+    "hostingPlanName": {
+      "value": "PubliconPlan"
+    },
+    "skuName": {
+      "value": "B1"
+    }
+  }
+
+}
